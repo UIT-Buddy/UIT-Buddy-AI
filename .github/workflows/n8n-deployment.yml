@@ -19,7 +19,7 @@ jobs:
         env:
           N8N_ENV_CONTENT: ${{ secrets.N8N_ENV_FILE }}
         run: |
-          printf "%s" "$N8N_ENV_CONTENT" > n8n.env
+          printf "%s" "$N8N_ENV_CONTENT" > gitops-manifests/n8n.env
 
       - name: Deploy n8n
         run: |
