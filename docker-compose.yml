@@ -10,6 +10,6 @@ services:
       - ${HOST_N8N_PORT}:5678
     volumes:
       - n8n_data:/data
- 
+  
 volumes:
   n8n_data:
