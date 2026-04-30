@@ -1,0 +1,28 @@
+name: Deploy n8n
+
+on:
+  push:
+    branches: ["main-n8n"]
+
+jobs:
+  deploy:
+    name: Deploy n8n to Production Server
+    runs-on: self-hosted
+    steps:
+      - name: Checkout GitOps Manifests
+        uses: actions/checkout@v4
+        with:
+          repository: UIT-Buddy/UIT-Buddy-GitOps-Manifests
+          path: gitops-manifests
+          ref: main-aws
+      - name: Create n8n.env from GitHub Secret
+        env:
+          N8N_ENV_CONTENT: ${{ secrets.N8N_ENV_FILE }}
+        run: |
+          printf "%s" "$N8N_ENV_CONTENT" > n8n.env
+
+      - name: Deploy n8n
+        run: |
+           set -e
+           cd gitops-manifests
+           make n8n-up
