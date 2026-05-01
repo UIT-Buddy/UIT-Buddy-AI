@@ -25,5 +25,5 @@ jobs:
         run: |
            set -e
            cd gitops-manifests
-           make n8n-up
+           sudo make n8n-up
            
