@@ -6,6 +6,8 @@ services:
     name: n8n
     image: docker.n8n.io/n8nio/n8n
     restart: always
+    environment:
+      - N8N_SECURE_COOKIE=false
     ports:
       - ${HOST_N8N_PORT}:5678
     volumes:
