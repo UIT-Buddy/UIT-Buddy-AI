@@ -28,7 +28,7 @@ jobs:
         with:
           repository: ${{env.GITOPS_REPO}}
           path: gitops-manifests
-          ref: main
+          ref: main-aws
 
       - name: Create env
         env:
