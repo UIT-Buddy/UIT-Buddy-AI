@@ -17,7 +17,3 @@ UIT_BUDDY_WEBHOOK_URL: str = _base
 UIT_BUDDY_TIMEOUT: int = int(os.getenv("UIT_BUDDY_TIMEOUT", "30"))
 
 SERVER_PORT: int = int(os.getenv("SERVER_PORT", "8000"))
-
-
-
-
