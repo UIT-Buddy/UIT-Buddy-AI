@@ -1,5 +1,4 @@
-"""Project enums package.
-"""
+"""Project enums package."""
 
 from __future__ import annotations
 
