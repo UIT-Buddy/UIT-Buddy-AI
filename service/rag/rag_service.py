@@ -20,8 +20,8 @@ import tempfile
 import os
 from client.rag_client import get_llm_func
 from config.rag_config import RAG_WORKING_DIR
-from enum.backend_endpoint import BackendEndpoint
-from enum.faculty import extract_major_code, get_major_from_subject
+from enums.backend_endpoint import BackendEndpoint
+from enums.faculty import extract_major_code, get_major_from_subject
 from prompts.backend_planner import (
     BACKEND_ENDPOINT_PLANNER_SYSTEM,
     BACKEND_ENDPOINT_PLANNER_USER_TEMPLATE,
@@ -30,7 +30,7 @@ from prompts.chat_answer import (
     CHAT_ANSWER_SYSTEM,
     CHAT_ANSWER_USER_TEMPLATE,
 )
-from enum import AuthStatus
+from enums import AuthStatus
 from service.backend.buddy_service import get_buddy_service
 from exception.buddy.buddy_exception import BackendAPIError
 from exception.chat.chat_exception import ChatException

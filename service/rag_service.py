@@ -22,7 +22,7 @@ from prompts import (
     BACKEND_ENDPOINT_PLANNER_SYSTEM,
     BACKEND_ENDPOINT_PLANNER_USER_TEMPLATE,
 )
-from enum import AuthStatus, BackendEndpoint
+from enums import AuthStatus, BackendEndpoint
 from service.backend.buddy_service import get_buddy_service
 from exception.buddy.buddy_exception import BackendAPIError
 from exception.chat.chat_exception import ChatException
