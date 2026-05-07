@@ -37,7 +37,7 @@ app.add_middleware(
 @app.get("/health")
 async def health():
     client = UITBuddyClient()
-    response = client.get(path="/docs", token=None, params=None)
+    response = await client.get(path="/docs", token=None, params=None)
     if response is None:
         return {"status": "error", "detail": "Cannot reach UIT Buddy Backend"}
     return {"status": "ok"}
