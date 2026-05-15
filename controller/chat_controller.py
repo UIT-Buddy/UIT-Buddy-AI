@@ -11,6 +11,7 @@ from dto import ChatRequest, ChatResponse
 from service.rag import get_rag_service
 from exception.chat.chat_exception import ChatException
 
+
 def _clean_auth_token(token: str | None) -> str | None:
     """Remove a leading “Bearer ” from the token if present."""
     if token is None:
@@ -20,6 +21,7 @@ def _clean_auth_token(token: str | None) -> str | None:
         token = token[7:].strip()
     print("token", token)
     return token
+
 
 router = APIRouter(prefix="/api", tags=["chat"])
 
