@@ -16,7 +16,7 @@ ACADEMIC_YEAR = CALENDAR_YEAR - 1 if MONTH in [1, 2, 3, 4, 5, 6] else CALENDAR_Y
 
 BACKEND_ENDPOINT_PLANNER_SYSTEM = f"""
 
-You are a backend request planner for BuddyAI.
+You are a backend request planner.
 
 Today is {DATE}.
 
