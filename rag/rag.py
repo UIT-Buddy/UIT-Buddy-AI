@@ -66,7 +66,7 @@ async def get_initialized_rag() -> LightRAG:
 async def query(
     question: str,
     mode: str = "mix",
-    top_k: int = 60,
+    top_k: int = 10,
     response_type: str = "Multiple Paragraphs",
     only_need_context: bool = False,
     major_anchor: str | None = None,
